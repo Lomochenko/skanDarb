@@ -10,7 +10,7 @@ const horizontalTween = gsap.to(cardsContainer, {
   scrollTrigger: {
     trigger: ".pin-panel",
     start: "top top",
-    end: "+=200%",
+    end: "+=100%",
     pin: true,
     scrub: true,
     markers: false
