@@ -70,6 +70,7 @@
 
 body {
   font-family: var(--font-family);
+  background-color: var(--success-light) !important;
   color: var(--black);
   font-size: 16px;
 }
@@ -155,7 +156,7 @@ h5,
 
 h6,
 .h6 {
-  font-size: 0.875em;
+  font-size: var(--fs-base);
   line-height: 1.25;
 }
 
@@ -180,7 +181,7 @@ h6,
 }
 
 p {
-  font-size: 1em;
+  font-size: var(--fs-base);
   font-weight: 400;
   line-height: 1.5;
   color: var(--dark-1);
@@ -212,10 +213,9 @@ p {
 
 .btn {
   font-weight: bold;
-  font-size: 16px;
+  font-size: var(--fs-md);
   line-height: 20px;
   text-align: center;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 12px 24px;
   border-radius: 4px;
@@ -337,7 +337,7 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 14px;
+  font-size: var(--fs-base);
   color: #fff !important;
   border-radius: 0;
   position: fixed;
@@ -364,7 +364,7 @@ p {
 .section-title-five {
   text-align: center;
   max-width: 550px;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 50px;
   position: relative;
   z-index: 5;
@@ -1055,7 +1055,6 @@ only screen and (min-width: 1400px) {
   border-radius: 0;
   position: relative;
   z-index: 1;
-  text-align: left;
 }
 
 .header-eight .header-content h1 {
@@ -1095,7 +1094,6 @@ only screen and (min-width: 1400px) {
 }
 
 .header-eight .primary-btn {
-  margin-right: 12px;
   background-color: var(--white);
   color: var(--primary);
   border: 1px solid transparent;
@@ -1308,7 +1306,7 @@ only screen and (min-width: 1400px) {
 ===========================*/
 .services-eight {
   padding: 50px 0;
-  background-color: #535C91;
+  /* background-color: #31363F; */
 }
 
 .services-eight1 {
@@ -1405,9 +1403,11 @@ only screen and (min-width: 1400px) {
 }
 
 /* gsap services */
-.panel {
+.bg {
   position: relative;
   overflow: hidden;
+  /* background: rgb(27, 26, 85); */
+  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
 }
 
 .cards-container {
@@ -1449,8 +1449,12 @@ only screen and (min-width: 1400px) {
 }
 
 /*===== PRICING THIRTEEN =====*/
+#pricing {
+  background-color: var(--success-light);
+}
+
 .pricing-fourteen {
-  padding: 100px 0;
+  padding: 40px 0;
   background-color: var(--light-3);
 }
 
