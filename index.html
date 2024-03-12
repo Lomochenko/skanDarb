@@ -528,10 +528,10 @@
             <form action="https://formsubmit.co/ali.naseri3179@gmail.com" method="POST" class="contact-form">
               <div class="row">
                 <div class="col-md-6">
-                  <input type="text" name="name" id="name" placeholder="نام و نام خانوادگی" required />
+                  <input type="text" name="name" id="name" placeholder="نام و نام خانوادگی" required/>
                 </div>
                 <div class="col-md-6">
-                  <input type="tel" name="phone" id="phone" placeholder="شماره تماس" required />
+                  <input type="tel" name="phone" id="phone" pattern="(0|[1-9][0-9]*)" placeholder="شماره تماس" required dir="rtl" onchange="try{setCustomValidity('شماره تلفن باید عدد باشد')}catch(e){}" />
                 </div>
               </div>
               <div class="row">
@@ -547,7 +547,7 @@
               <div class="row">
                 <div class="col-12">
                   <div class="button text-center rounded-buttons">
-                    <input type="hidden" name="-next" value="dist/tnx.html">
+                    <input type="hidden" name="-redirect_to" value="dist/tnx.html" >
                     <input type="hidden" name="-captcha" value="false">      
                     <button type="submit" class="btn primary-btn rounded-full">
                       ارسال پیام
