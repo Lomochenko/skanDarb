@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Vazirmatn:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
 
 /*===========================
   COMMON css 
 ===========================*/
+@font-face {
+  font-family: pari;
+  src: url('assets/Parastoo.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --font-family: "vazir", sans-serif;
+  --font-family: "pari", sans-serif;
   --primary: #1B1A55;
   --primary-dark: #1c3ab6;
   --primary-light: #e2f1ff;
@@ -70,7 +77,7 @@
 
 body {
   font-family: var(--font-family);
-  background-color: var(--success-light) !important;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   color: var(--black);
   font-size: 16px;
 }
@@ -327,8 +334,6 @@ p {
 .scroll-top {
   width: 45px;
   height: 45px;
-  line-height: 45px;
-  background: var(--primary);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,7 +344,7 @@ p {
   -ms-flex-align: center;
   align-items: center;
   font-size: var(--fs-base);
-  color: #fff !important;
+  color: var(--primary) !important;
   border-radius: 0;
   position: fixed;
   bottom: 40px;
@@ -356,7 +361,6 @@ p {
   box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
   -webkit-transform: translate3d(0, -10px, 0);
   transform: translate3d(0, -5px, 0);
-  background-color: var(--primary);
 }
 
 /*===========================
@@ -457,7 +461,6 @@ p {
 .navbar-brand {
   margin: 0;
   color: #fff;
-  /* font-family: 'headvig', sans-serif; */
   font-size: var(--fs-lg);
 }
 
@@ -926,7 +929,7 @@ only screen and (min-width: 1400px) {
 }
 
 .sidebar-left .sidebar-content .sidebar-menu ul li a {
-  font-size: 16px;
+  font-size: var(--fs-base);
   line-height: 24px;
   font-weight: 500;
   padding: 8px 0;
@@ -949,6 +952,14 @@ only screen and (min-width: 1400px) {
 
 .sidebar-left .sidebar-content .text {
   margin-top: 20px;
+}
+
+.sidebar-social a {
+  opacity: .7;
+}
+
+.sidebar-social a:hover {
+  opacity: 1;
 }
 
 .sidebar-left .sidebar-content .sidebar-social .social-title {
@@ -1129,7 +1140,7 @@ only screen and (min-width: 1400px) {
   about-05 css
 ===========================*/
 .about-five {
-  background-color: var(--light-3);
+  /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
   padding-top: 120px;
   padding-bottom: 90px;
 }
@@ -1303,7 +1314,7 @@ only screen and (min-width: 1400px) {
 ===========================*/
 .services-eight {
   padding: 50px 0;
-  background-color: var(--white);
+  /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
 }
 
 .services-eight1 {
@@ -1332,6 +1343,7 @@ only screen and (min-width: 1400px) {
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .services-eight .single-services:hover {
@@ -1399,60 +1411,10 @@ only screen and (min-width: 1400px) {
   color: var(--dark-3);
 }
 
-/* gsap services */
-.bg {
-  position: relative;
-  overflow: hidden;
-  /* background: rgb(27, 26, 85); */
-  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
-}
-
-.cards-container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 50px;
-}
-
-.card {
-  height: 50%;
-  flex: 1 0 50%;
-  /* border: 2px solid fuchsia; */
-  margin-right: 50px;
-  opacity: 0;
-}
-
-@media screen and (max-width: 678px) {
-  .card {
-    height: 50%;
-    flex: 1 0 100%;
-  }
-}
-
-.card:last-child {
-  margin-right: 0;
-}
-
-.red {
-  background-color: red;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
 /*===== PRICING THIRTEEN =====*/
-#pricing {
-  background-color: var(--white);
-}
-
 .pricing-fourteen {
   padding: 40px 0;
-  background-color: var(--light-3);
+  /* background-color: var(--light-3); */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1787,9 +1749,6 @@ only screen and (min-width: 1400px) {
 }
 
 /* ===== Buttons Css ===== */
-#contact{
-  background-color: var(--white);
-}
 .contact-form-wrapper .contact-form .primary-btn {
   background: var(--primary);
   color: var(--white);
@@ -1835,7 +1794,7 @@ only screen and (min-width: 1400px) {
   display: flex;
   border: 1px solid var(--gray-4);
   border-radius: 10px;
-  background: var(--white);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   margin-bottom: 30px;
   padding: 20px 30px;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -1914,7 +1873,7 @@ only screen and (min-width: 1400px) {
 
 .contact-form-wrapper {
   padding: 50px 40px;
-  background: var(--white);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border: 1px solid var(--gray-4);
   margin-left: 0px;
   border-radius: 10px;
@@ -1991,7 +1950,6 @@ only screen and (min-width: 1400px) {
 
 /* Footer eleven css */
 .footer-eleven {
-  background-color: var(--white);
   position: relative;
 }
 
