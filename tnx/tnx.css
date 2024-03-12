@@ -13,6 +13,7 @@ body {
   font-family: pari;
   src: url('../assets/Parastoo.woff2') format('woff2');
   font-weight: bold;
+  font-size: 18px;
 }
 .container{
   width: 100%;
