@@ -12,8 +12,7 @@ body {
 @font-face {
   font-family: pari;
   src: url('../assets/Parastoo.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: bold;
 }
 .container{
   width: 100%;
