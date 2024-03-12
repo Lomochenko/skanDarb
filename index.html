@@ -468,7 +468,6 @@
   <section id="contact" class="contact-section">
     <div class="container">
       <div class="row">
-        <input type="hidden" name="-next" value="dist/tnx.html">
         <div class="col-xl-4">
           <div class="contact-item-wrapper">
             <div class="row">
@@ -527,12 +526,14 @@
               </div>
             </div>
             <form action="https://formsubmit.co/ali.naseri3179@gmail.com" method="POST" class="contact-form">
+              <input type="hidden" name="-next" value="dist/tnx.html">
+              <input type="hidden" name="-captcha" value="false">
               <div class="row">
                 <div class="col-md-6">
                   <input type="text" name="name" id="name" placeholder="نام و نام خانوادگی" required />
                 </div>
                 <div class="col-md-6">
-                  <input type="text" name="phone" id="phone" placeholder="شماره تماس" required />
+                  <input type="tel" name="phone" id="phone" placeholder="شماره تماس" required />
                 </div>
               </div>
               <div class="row">
