@@ -65,8 +65,9 @@
           <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand headvig" href="index.html">
               <div class="grid__item color-2">
-				<a class="link link--surinami" href="#"><span data-letters-l="Suri" data-letters-r="nami">Surinami</span></a>
-			</div>
+                <a class="link link--surinami" href="#"><span data-letters-l="Suri"
+                    data-letters-r="nami">Surinami</span></a>
+              </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
               aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
@@ -534,7 +535,8 @@
                 </div>
                 <div class="col-md-6">
                   <input type="tel" name="phone" id="phone" pattern="^[0-9]{11,14}$" placeholder="شماره تماس" required
-                    dir="rtl" oninvalid="this.setCustomValidity('مقدار ورودی اشتباه')" oninput="this.setCustomValidity('شماره تلفن همراه یا ثابت وارد کنید')"/>
+                    dir="rtl" oninvalid="this.setCustomValidity('مقدار ورودی اشتباه')"
+                    oninput="this.setCustomValidity('شماره تلفن همراه یا ثابت وارد کنید')" />
                 </div>
               </div>
               <div class="row">
@@ -550,9 +552,9 @@
               <div class="row">
                 <div class="col-12">
                   <div class="button text-center rounded-buttons">
-                    <!-- <input type="hidden" name="-next" value="dist/tnx.html"> -->
+                    <input type="hidden" name="-next" value="dist/tnx.html">
                     <input type="hidden" name="-captcha" value="false">
-                    <button onclick="window.location.href = 'tnx/tnx.html';" type="submit" value="submit" class="btn primary-btn rounded-full">
+                    <button type="submit" class="btn primary-btn rounded-full">
                       ارسال پیام
                     </button>
                   </div>
@@ -629,9 +631,19 @@
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
   <script src="assets/js/gsap.js"></script>
 
-  <!-- <script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var form = document.querySelector(".contact-form");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); //جلوگیری از ارسال پیش‌فرض فرم
+        var nextUrl = form.querySelector('input[name="-next"]').value;
+        if (formSubmit.validate(form)) { //بررسی صحت فرم توسط formSubmit
+          formSubmit.submit(form, nextUrl); //ارسال فرم و هدایت به صفحه بعد
+        }
+      });
+    });
 
-  </script> -->
+  </script>
 </body>
 
 </html>
