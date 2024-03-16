@@ -66,3 +66,19 @@
 
   ("use strict");
 })();
+
+//isotope plugin
+var iso = new Isotope(".portfolio .grid", {
+  itemSelector: ".grid-item",
+  filter: ".dar" // Default filter set to ".dar"
+});
+document.querySelectorAll(".portfolio .filters span").forEach((item) => {
+  item.addEventListener("click", () => {
+    document
+      .querySelectorAll(".portfolio .filters span")
+      .forEach((i) => i.classList.remove("current"));
+    item.classList.add("current");
+
+    iso.arrange({ filter: item.getAttribute("data-filter") });
+  });
+});
