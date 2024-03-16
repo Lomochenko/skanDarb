@@ -356,8 +356,8 @@ p {
 
 /* One Click Scrool Top Button*/
 .scroll-top {
-  width: 45px;
-  height: 45px;
+  width: 3rem;
+  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,8 +381,8 @@ p {
 }
 
 .scroll-top:hover {
-  -webkit-box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
-  box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
+  /* -webkit-box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
+  box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important; */
   -webkit-transform: translate3d(0, -10px, 0);
   transform: translate3d(0, -5px, 0);
 }
@@ -2167,4 +2167,50 @@ only screen and (min-width: 1400px) {
     overflow: hidden;
     justify-content: space-around;
   }
+}
+
+/* pesteh tech */
+/* === removing default button style ===*/
+.pesteh {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.pesteh {
+  --border-left: 6px;
+  --text-stroke-color: rgba(0, 0, 0, 0.6);
+  --animation-color: #37FF8B;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-base);
+  font-family: "headvig", sans-serif;
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-left: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+.pesteh:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
 }
