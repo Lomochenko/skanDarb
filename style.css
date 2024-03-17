@@ -1820,7 +1820,8 @@ only screen and (min-width:1400px) {
     overflow-y: hidden;
     overflow-x: scroll;
     text-wrap: nowrap;
-    border-radius: 1rem
+    border-radius: 1rem;
+    z-index: 9;
 }
 
 .filters span {
@@ -1829,7 +1830,8 @@ only screen and (min-width:1400px) {
     font-weight: 600;
     margin: auto 0;
     padding: 1rem;
-    transition: all ease .5s
+    transition: all ease .5s;
+    z-index: 9;
 }
 
 .filters span:hover {
@@ -1837,7 +1839,9 @@ only screen and (min-width:1400px) {
     color: var(--white);
     -webkit-box-shadow: 0 0 50px 5px rgba(1, 69, 94, .67);
     -moz-box-shadow: 0 0 50px 5px rgba(1, 69, 94, .67);
-    box-shadow: 0 0 50px 5px rgba(1, 69, 94, .67)
+    box-shadow: 0 0 50px 5px rgba(1, 69, 94, .67);
+    z-index: 9;
+
 }
 
 .current {
@@ -1846,7 +1850,9 @@ only screen and (min-width:1400px) {
 }
 
 .filters span {
-    cursor: pointer !important
+    cursor: pointer !important;
+    z-index: 9;
+
 }
 
 .grid-item img {
