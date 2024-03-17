@@ -41,7 +41,7 @@
     /* opacity: 0; */
     /* animation: fadeInLetter 1s forwards,  scaleIn 1s forwards; */
     top: 50%;
-    height: 500px;
+    /* height: 500px; */
     position: absolute;
     width: 100%;
     /* left: 50%; */
@@ -1086,7 +1086,7 @@ only screen and (min-width:1400px) {
 .header-eight {
     position: relative;
     height: 100vh;
-    /* padding: 140px 0 100px 0; */
+    padding: 85px 0 100px 0;
     background: var(--primary)
 }
 
@@ -1104,6 +1104,7 @@ only screen and (min-width:1400px) {
 
 .header-eight .header-image img {
     width: 100%;
+    height: auto;
     border-radius: 8px
 }
 
@@ -1149,7 +1150,7 @@ only screen and (min-width:1400px) {
 .header-eight .header-content p {
     margin-top: 30px;
     color: var(--white);
-    opacity: .7;
+    opacity: .9;
     text-align: center;
 }
 
