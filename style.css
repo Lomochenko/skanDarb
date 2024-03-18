@@ -1087,7 +1087,12 @@ only screen and (min-width:1400px) {
     position: relative;
     height: 100vh;
     padding: 85px 0 100px 0;
-    background: var(--primary)
+    /* background: var(--primary) */
+    background: rgb(10, 100, 188);
+    background: -moz-linear-gradient(180deg, rgba(10, 100, 188, 1) 0%, rgba(253, 251, 251, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(10, 100, 188, 1) 0%, rgba(253, 251, 251, 1) 100%);
+    background: linear-gradient(180deg, rgba(10, 100, 188, 1) 0%, rgba(253, 251, 251, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a64bc", endColorstr="#fdfbfb", GradientType=1);
 }
 
 @media only screen and (min-width:768px) and (max-width:991px) {
@@ -1098,7 +1103,8 @@ only screen and (min-width:1400px) {
 
 @media (max-width:767px) {
     .header-eight {
-        padding: 100px 0 60px 0
+        padding: 100px 0 60px 0;
+        height: 100%;
     }
 }
 
@@ -1165,9 +1171,8 @@ only screen and (min-width:1400px) {
 }
 
 .header-eight .primary-btn:hover {
-    background-color: transparent;
+    background-color: var(--primary);
     color: var(--white);
-    border-color: var(--white)
 }
 
 .about-five {
